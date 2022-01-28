@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Javascript Handling the focus event</title>
+  </head>
+  <body>
+    <form
+      action="save.php"
+      method="post"
+      onsubmit="validateForm(event,this)"
+    >
+      <label for="txt_name">Ingresa tu nombre :</label>
+      <input
+        id="txt_name"
+        name="name"
+        type="text"
+        placeholder="John"
+        onfocus="highlightInput(this)"
+        onblur="clearInput(this)"
+      />
+      <br /><br />
+      <label for="txt_lastname">Ingresa tu apellido:</label>
+      <input
+        id="txt_lastname"
+        type="text"
+        name="lastname"
+        placeholder="Doe"
+        onfocus="highlightInput(this)"
+        onblur="clearInput(this)"
+      />
+      <br /><br />
+      <label for="txt_lastname">Género:</label>
+      <select
+        name="genre"
+        onchange="showOption(event,this)"
+      >
+        <option disabled>Seleciona un genero</option>
+        <option value="male">Soy hombre</option>
+        <option value="female">Soy Mujer</option>
+        <option value="no-binary">
+          Prefiero no decirlo
+        </option>
+      </select>
+
+      <br />
+      <br />
+
+      <button type="submit">Enviar</button>
+      </form>
+    <script src="js/script.js"></script>
+  </body>
+</html>

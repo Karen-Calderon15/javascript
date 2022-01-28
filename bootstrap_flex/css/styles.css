@@ -1,0 +1,19 @@
+.bg-purple{
+    background-color:#a6a0dd;
+}
+.bg-green{
+    background-color: lightgreen;
+}
+.bg-red{
+    background-color: #f86874;
+}
+.row>*{
+    height: 40vh;
+}
+.bd-highlight {
+    background-color: #563d7c26;
+    border: 1px solid #563d7c26;
+  }
+  .h-25 {
+    height: 25vh !important;
+  }

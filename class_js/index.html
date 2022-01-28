@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: yellowgreen;
+      }
+
+      .bloque {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+      .color-green {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="alone_box" class="box contenedor">
+      Soy una caja vacia
+    </div>
+    <script>
+      const caja = document.querySelector("#alone_box");
+
+      console.log(caja.className); // box contenedor
+      console.log(caja.getAttribute("class")); // box contenedor
+
+      // caja.className = "bloque"; // remplazar por "bloque"
+      // console.log(caja.className);
+
+      caja.setAttribute("class", "bloque"); // remplazar por "bloque"
+
+      caja.classList;
+      console.log(caja.classList); // [box, contenedor]
+
+      console.log(caja.classList.item(1)); // contenedor
+
+      // caja.classList.add("bold");
+
+      // console.log(caja.classList.item(2)); // bold
+
+      // caja.classList.add("color-green");
+
+      // console.log(caja.classList.item(3)); // color-green
+
+      caja.classList.add("bold", "color-green");
+      
+      console.log(caja.className); // box contenedor bold color-green]
+      
+    	caja.classList.remove("contenedor", "bold");
+
+      console.log(caja.className); // box color-green
+
+
+
+       
+      
+      // toggle es bipolar (Añadir o Eliminar)
+      caja.classList.toggle("bold", true); // add -> si esta en true
+      caja.classList.toggle("color-green"); // por defecto esta en true
+      console.log(caja.className);
+
+      caja.classList.toggle("contenedor", false); // remove -> si esta en false
+      caja.classList.toggle("bold", false); // false-> obligatorio si quiero eliminar
+      console.log(caja.className);
+
+       
+      caja.classList.replace("color-green", "color-blue"); //reemplaza una clase por otra
+
+    </script>
+  </body>
+</html>
